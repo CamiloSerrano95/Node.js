@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Show your name</title>
+</head>
+<body>
+    <h1>Show your name with Node.js</h1>
+
+    <h2>Select the method by which you will send your data</h2>
+
+    <select name="select" id="take" onchange="get()">
+        <option value="GET">GET</option> 
+        <option value="POST">POST</option>
+    </select><br><br>
+
+    <form action="Recept.js" id="form" method="GET">
+
+        <input name="name" type="text" placeholder="Enter your name" required>
+        <input name="lastname" type="text" placeholder="Enter your lastname" required>
+        <input type="submit" value="Enviar"> 
+    </form>
+
+    <script>
+        function get(){
+            var value = document.getElementById('take').value;
+            var valuefrom = document.getElementById('form');
+            valuefrom.setAttribute('method', value);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Form with Express!</h1>
+
+    <h2>Select the method by which you will send your data</h2>
+
+    <select id="take" onchange="get()">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+    </select><br><br>
+
+    <form action="/processend" id="form" method="GET" onsubmit="return val()">
+        <input type="text" name="name" placeholder="Enter your name"><br><br>
+        <input type="text" name="lastname" placeholder="Enter your last name"><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    
+    <script>
+        function get(){
+            var value = document.getElementById('take').value;
+            var valuefrom = document.getElementById('form');
+            valuefrom.setAttribute('method', value); 
+
+            //var obj = document.getElementById('form').getAttribute('action');
+
+            if (obj == '') {
+                
+            } else {
+                
+            }
+
+        }
+
+        /*function val(){
+            console.log(document.getElementById('form').getAttribute('action'));
+
+            return false;
+        }*/
+    </script>
+</body>
+</html>
